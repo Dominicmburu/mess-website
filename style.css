@@ -1,0 +1,1060 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --black-bg-color: rgb(1, 0, 5);
+    --white-bg-color: rgba(255, 255, 255, 1);
+    --bg-color: #13134d;
+    --box-bg-color: rgba(147, 174, 201, 0.836);
+    --bg-word-color: rgba(88, 79, 79, 0.562);
+}
+
+body {
+    align-items: center;
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-bg-color);
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .logo span {
+    color: var(--bg-color);
+    padding-left: 5px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+header .container .notification {
+    position: relative;
+    margin: 0 12px 0;
+    cursor: pointer;
+}
+
+header .container .notification p {
+    color: rgb(0, 0, 0);
+    padding-right: 12px;
+}
+
+header .container .help .fa-circle-question {
+    font-size: 18px;
+    margin: 0 12px 0;
+    cursor: pointer;
+}
+
+header .container .notification p .fa-envelope {
+    font-size: 19px;
+    cursor: pointer;
+}
+
+header .container .notification span {
+    position: absolute;
+    top: -10px;
+    right: 4px;
+    color: var(--bg-color);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+header .profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid var(--box-bg-color);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+}
+
+
+/* footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-bg-color);
+    box-shadow: 5px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer a {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    color: var(--black-bg-color);
+    padding: 15px 0;
+    font-size: 17px;
+}
+
+.footer i {
+    padding-bottom: 5px;
+}
+
+
+/* body */
+
+.cash-container {
+    width: 95vw;
+    background-color: var(--box-bg-color);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 4px;
+    margin: 100px auto 0 auto;
+    color: var(--black-bg-color);
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.cash-container .money-container {
+    padding: 12px;
+    background-color: rgba(88, 79, 79, 0.562);
+    margin: 2px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cash-container .money-container .bal {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 0 0 0;
+    color: var(--white-bg-color);
+}
+
+.cash-container .money-container .cash {
+    font-size: 21px;
+    margin: 20px 0 10px 20px;
+    font-weight: 700;
+    padding: 10px 0 0 20px;
+    background-color: rgba(26, 1, 1, 0.274);
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--white-bg-color);
+    display: inline-block;
+}
+
+.cash-container .money-container .cash span {
+    background-color: var(--box-bg-color);
+    padding: 5px;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+    color: var(--bg-color);
+}
+
+.cash-container .transact {
+    display: flex;
+    align-items: center;
+}
+
+.cash-container .transact .mny {
+    width: 100%;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.cash-container .transact .mny a {
+    color: var(--white-bg-color);
+    background-color: var(--bg-color);
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px 0;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 2px;
+}
+
+.cash-container .transact .mny:hover {
+    transform: scale(1.01);
+}
+
+.transactions-container {
+    width: 95vw;
+    background-color: var(--box-bg-color);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    margin: 10px auto 100px auto;
+    border-radius: 5px;
+    color: var(--white-bg-color);
+}
+
+.transactions-container p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 20px 0;
+    color: var(--bg-color);
+}
+
+.transactions-container .transactions li {
+    list-style-type: none;
+    background-color: rgb(109, 111, 116);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transactions-container .transactions li .cash-message {
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.transactions-container .transactions li .received-message {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.transactions-container .transactions li .received-message .transfer-date {
+    font-weight: 300;
+    font-size: smaller;
+}
+
+.transactions-container button {
+    margin: 20px auto 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.transactions-container button:hover {
+    transform: scale(1.01);
+}
+
+.transactions-container button a {
+    color: var(--white-bg-color);
+}
+
+
+/* food */
+
+.food-container {
+    width: 95%;
+    margin: 100px auto;
+    background-color: var(--box-bg-color);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.food-container h2 {
+    padding: 10px 0;
+    font-size: 30px;
+    color: var(--bg-color);
+}
+
+.food-container p {
+    margin-bottom: 5px;
+    color: var(--bg-color);
+}
+
+.food-container p sup {
+    font-size: 15px;
+    color: var(--bg-color);
+}
+
+.food-container h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    font-size: 25px;
+    color: var(--bg-color);
+    display: none;
+}
+
+.food-container ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+}
+
+.food-container ul li {
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    color: var(--white-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 25px;
+    margin: 15px 18px;
+}
+
+.food-container ul li .price {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+
+.food-container ul li .price p {
+    color: var(--white-bg-color);
+    margin-top: 5px;
+}
+
+.food-container ul li .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.food-container ul li .quantity button {
+    padding: 4px 16px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.food-container ul li .quantity .toolbox {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.food-container ul li .quantity input {
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 4px 5px;
+    margin: 0 5px;
+    width: 50px;
+    border: none;
+    text-align: center;
+}
+
+.food-container ul li .quantity .toolbox button:active {
+    background-color: #ccc;
+}
+
+.food-container .amount {
+    background-color: var(--bg-color);
+    color: var(--white-bg-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin: 20px 0 5px 12px;
+}
+
+.food-container .amount p {
+    color: var(--white-bg-color);
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.food-container .amount span {
+    padding: 0 12px;
+    background-color: var(--bg-word-color);
+    padding: 15px 40px;
+    font-weight: bold;
+}
+
+.food-container .view-food {
+    width: 100%;
+    max-width: 100%;
+    margin: 12px auto;
+}
+
+.food-container .view-food button {
+    border: none;
+    color: var(--white-bg-color);
+    background-color: var(--bg-color);
+    padding: 15px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    min-width: 98%;
+}
+
+.food-container .view-food button:hover {
+    transform: scale(1.01);
+}
+
+@media screen and (max-width: 670px) {
+    header {
+        padding: 5px 12px;
+    }
+    .selection-amount {
+        width: 98%;
+    }
+    .cash-container .money-container .bal {
+        font-size: 17px;
+    }
+    .cash-container .money-container .cash {
+        font-size: 17px;
+    }
+    .cash-container .transact .mny a {
+        font-size: 14px;
+    }
+    .transactions-container .transactions li .cash-message {
+        font-size: 14px;
+    }
+    .transactions-container .transactions li .received-message {
+        font-size: 14px;
+    }
+    .transactions-container p {
+        font-size: 17px;
+    }
+    .transactions-container button {
+        font-size: 13px;
+    }
+    .food-container h2 {
+        font-size: 24px;
+    }
+    .food-container .all-food ul li {
+        margin: 12px 10px;
+        padding: 20px 15px;
+        font-size: 14px;
+        max-width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .food-container ul li .price p {
+        padding-top: 5px;
+    }
+    .food-container ul li .quantity {
+        align-items: flex-start;
+        margin-top: 12px;
+    }
+    .food-container ul li .quantity button {
+        padding: 3px 13px;
+    }
+    .food-container ul li .quantity input {
+        width: 30px;
+        height: 27px;
+    }
+    .selection-amount .amount #result {
+        font-size: 18px;
+    }
+    .selection-amount .amount .btn {
+        font-size: 14px;
+    }
+    .settings-container .profile-settings .image-settings button {
+        padding: 10px 20px;
+    }
+    .settings-container .profile-settings .image-settings {
+        margin: 10px;
+    }
+    .settings-container ul li a .desc .desc-info h3 {
+        font-size: 17px;
+    }
+    .settings-container ul li a .desc .desc-info p {
+        font-size: 14px;
+    }
+    .footer a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .food-container .all-food ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+    .food-container .all-food ul li .price {
+        margin-bottom: 8px;
+        align-items: center;
+        text-align: center;
+    }
+    .food-container .all-food ul li .quantity {
+        align-items: center;
+    }
+    .selection-amount {
+        width: 92%;
+        margin: 3px auto;
+    }
+}
+
+
+/*Settings*/
+
+.settings-container {
+    width: 95vw;
+    background-color: var(--box-bg-color);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 4px;
+    margin: 100px auto 100px auto;
+    color: var(--black-bg-color);
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.settings-container h2 {
+    color: var(--bg-color);
+    padding: 12px;
+    font-size: 25px;
+}
+
+
+/* .upload {
+    width: 140px;
+    position: relative;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    z-index: 0;
+}
+
+.upload img {
+    border-radius: 50%;
+    border: 8px solid #DCDCDC;
+    width: 125px;
+    height: 125px;
+}
+
+.upload .rightRound {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #00B4FF;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.upload .leftRound {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: red;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.upload .fa {
+    color: white;
+}
+
+.upload input {
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+.upload input::-webkit-file-upload-button,
+.upload input[type=submit] {
+    cursor: pointer;
+} */
+
+.settings-container ul {
+    list-style-type: none;
+    margin: 5px;
+    max-width: 100%;
+}
+
+.settings-container ul li {
+    width: 100%;
+    background-color: rgb(109, 111, 116);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.settings-container ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-bg-color);
+}
+
+.settings-container ul li a .desc {
+    display: flex;
+    align-items: center;
+}
+
+.settings-container ul li a .desc i {
+    font-size: 25px;
+    border: 1px solid var(--bg-color);
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--bg-color);
+    margin-right: 10px;
+}
+
+.settings-container ul li a i {
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.settings-container button {
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--white-bg-color);
+    border-radius: 5px;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 5px auto;
+    padding: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.settings-container button i {
+    margin-right: 10px;
+}
+
+.settings-container button:hover {
+    transform: scale(1.01);
+}
+
+
+/* index page */
+
+.wrapper {
+    background: var(--box-bg-color);
+    max-width: 450px;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2), -2px 1px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+/* Login & Signup Form CSS Start */
+
+.wrapper .form {
+    width: 100%;
+    padding: 25px 30px;
+}
+
+.form h3 {
+    font-size: 29px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.form h3 span {
+    color: var(--bg-color);
+}
+
+.form form {
+    margin: 20px 0;
+}
+
+.form form .error-txt {
+    color: var(--white-bg-color);
+    font-size: 18px;
+    padding: 10px 12px;
+    text-align: center;
+    border-radius: 5px;
+    background: var(--bg-color);
+    border: 1px solid var(--white-bg-color);
+    margin-bottom: 10px;
+    /* display: none; */
+}
+
+.form form .name-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    color: var(--bg-color);
+    font-weight: 500;
+}
+
+.form form .field {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    position: relative;
+}
+
+.form form .field label {
+    margin-bottom: 4px;
+}
+
+.form form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid var(--bg-color);
+}
+
+.form form .field input {
+    outline: none;
+}
+
+.form form .image input {
+    font-size: 17px;
+}
+
+.form form .button input {
+    height: 45px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    background: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 13px;
+}
+
+.form form .name-details .input .num {
+    -moz-appearance: textfield;
+}
+
+.fund .transfer input::-webkit-outer-spin-button,
+.fund .transfer input::-webkit-inner-spin-button,
+.addFund .fund-container fieldset input::-webkit-outer-spin-button,
+.addFund .fund-container fieldset input::-webkit-inner-spin-button,
+.form form .name-details .input .num::-webkit-outer-spin-button,
+.form form .name-details .input .num::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form .link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.form .link a {
+    color: rgb(32, 13, 197);
+}
+
+.form .link a:hover {
+    text-decoration: underline;
+}
+
+
+/*add funds*/
+
+.addFund .fund-container {
+    width: 95vw;
+    background-color: var(--box-bg-color);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    margin: 100px auto 100px auto;
+    border-radius: 5px;
+    color: var(--white-bg-color);
+}
+
+.addFund .fund-container h3 {
+    color: var(--bg-color);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.fund .transfer,
+.addFund .fund-container fieldset {
+    color: var(--bg-color);
+    font-size: 18px;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 5px;
+    border: 1px solid var(--bg-color);
+}
+
+.fund .transfer input,
+.addFund .fund-container fieldset input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+    border: 1px solid var(--bg-color);
+    -moz-appearance: textfield;
+}
+
+.addFund .fund-container fieldset select {
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: var(--bg-color);
+}
+
+.addFund .fund-container fieldset select option {
+    font-size: 14px;
+}
+
+.addFund .fund-container button {
+    width: 90%;
+    margin: 30px auto 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 0;
+    color: var(--white-bg-color);
+    background-color: var(--bg-color);
+}
+
+.addFund .fund-container button:hover {
+    scale: 1.01;
+}
+
+
+/*confirm details*/
+
+.fund {
+    width: 95vw;
+    background-color: var(--box-bg-color);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    margin: 100px auto 100px auto;
+    border-radius: 5px;
+}
+
+.fund .fund-trans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fund h3 {
+    color: var(--bg-color);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.fund .confDetails .details {
+    text-align: center;
+}
+
+.fund .confDetails .details h4 {
+    font-size: 20px;
+    margin: 25px 0 5px;
+}
+
+.fund .confDetails .details p {
+    color: black;
+    font-weight: 510;
+}
+
+.fund .btns {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.fund .btns button {
+    border: none;
+    border-radius: 5px;
+    width: 45%;
+    margin: 30px auto 5px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 0;
+    color: var(--white-bg-color);
+    background-color: var(--bg-color);
+}
+
+.fund .btns button:hover {
+    scale: 1.01;
+}
+
+
+/*transfer Fund beneficiary*/
+
+.suggested-number {
+    background-color: var(--bg-word-color);
+    border-radius: 5px;
+    padding: 25px 12px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    color: var(--white-bg-color);
+    font-size: 18px;
+    border: 1px solid var(--bg-color);
+}
+
+
+/*chrome, safaris, opera*/
+
+.suggested-number ul .content::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*IE, edge, firefox*/
+
+.suggested-number ul {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+    width: 100%;
+}
+
+.suggested-number ul li {
+    border-bottom: 1px solid var(--bg-color);
+    border-top: 1px solid var(--bg-color);
+    /* position: relative; */
+    overflow-wrap: break-word;
+}
+
+.suggested-number ul li:first-child {
+    border-top: none;
+}
+
+.suggested-number ul li:last-child {
+    border-bottom-width: 3px;
+}
+
+.suggested-number ul .content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.suggested-number ul .shadow {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 10px;
+    background: red;
+}
+
+.suggested-number ul .shadow.top-shadow {
+    top: 0;
+    background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.35), transparent);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent);
+    opacity: 0;
+}
+
+.suggested-number ul .shadow.bottom-shadow {
+    bottom: 0;
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.35), transparent);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), transparent);
+    opacity: 0;
+}
+
+.suggested-number ul li .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.fund ul .pay-food {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-word-color);
+    color: var(--white-bg-color);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 5px 0;
+}
+
+.fund ul .pay-food div {
+    display: flex;
+    flex-direction: column;
+}
+
+.fund ul .pay-food .quant {
+    text-align: center;
+}
+
+.fund ul .pay-food .fa-trash {
+    cursor: pointer;
+    background-color: var(--bg-color);
+    padding: 12px 20px;
+    border-radius: 5px;
+}
+
+.fund .amount {
+    background-color: var(--bg-color);
+    color: var(--white-bg-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin: 20px 0 0 0;
+}
+
+.fund .amount p {
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.fund .amount span {
+    padding: 0 12px;
+    background-color: var(--bg-word-color);
+    padding: 15px 40px;
+    font-weight: bold;
+}

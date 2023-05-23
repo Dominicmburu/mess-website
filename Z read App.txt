@@ -1,0 +1,1 @@
+this app when you pay food. your details will be seen by the admin and he will just ask for your name and then he will print your food details.
